@@ -2,69 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/assets/favicon-26869ae2.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cruna Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Ubuntu+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <script>
-      if (localStorage.theme === "dark" || !("theme" in localStorage)) {
-        document.querySelector("html").classList.add("dark");
-        document.querySelector("html").style.colorScheme = "dark";
-      } else {
-        document.querySelector("html").classList.remove("dark");
-        document.querySelector("html").style.colorScheme = "light";
-      }
-
-      function replacer(key, value) {
-        if (typeof value === "bigint") {
-          return value.toString() + "n"; // Convert BigInt to a string with "n" at the end
-        } else {
-          return value;
-        }
-      }
-      function reviver(key, value) {
-        if (typeof value === "string" && value.match(/^-?\d+n$/)) {
-          return BigInt(value.slice(0, -1)); // Convert the string back to BigInt
-        } else {
-          return value;
-        }
-      }
-
-      const stringify = (obj) => JSON.stringify(obj, replacer);
-      const parse = (str) => JSON.parse(str, reviver);
-      function log(...params) {
-        if (localStorage.getItem("debug") !== "true") return;
-        let data;
-        if (params.length === 1) {
-          data = params[0];
-        } else {
-          data = [...params];
-        }
-        console.debug(stringify(data, null, 2));
-      }
-    </script>
-    <script type="module" crossorigin src="/assets/index-f5500b03.js"></script>
-    <link rel="stylesheet" href="/assets/index-1b30c8f7.css">
+    <meta http-equiv="refresh" content="0;url=https://github.com/crunaprotocol" />
   </head>
-  <body
-    class="font-inter antialiased bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400"
-  >
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script>
-      if (localStorage.getItem("sidebar-expanded") == "true") {
-        document.querySelector("body").classList.add("sidebar-expanded");
-      } else {
-        document.querySelector("body").classList.remove("sidebar-expanded");
-      }
-    </script>
-    <div id="root"></div>
-    
+  <body>
   </body>
 </html>
